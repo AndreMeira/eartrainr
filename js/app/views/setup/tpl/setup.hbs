@@ -1,0 +1,43 @@
+<form>
+	<h2>Set up the training</h2>
+	<div class="row">
+		<div class="col-md-6 col-xs-12">
+			<label>Choose the intervals to train on:</label>
+		</div>
+		<div class="col-md-6 col-xs-12">
+			<select id="itv-select" class="selectpicker form-control">
+				<option value="beginner">third  - fifth - octave</option>
+				<option value="easy">fourth - sixth - seventh</option>
+				<option value="intermediate">second - triton - seventh</option>
+				<option value="expert">All intervals</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-xs-12">
+			<label>Octave range:</label>
+		</div>
+		<div class="col-md-6 col-xs-12">
+			<select id="rng-select" class="selectpicker form-control">
+				<option value="1">1 octave</option>
+				<option value="2">2 octaves</option>
+				<option value="3">3 octaves</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-xs-12">
+			<label>Choose the way the interval is played:</label>
+		</div>
+		<div class="col-md-6 col-xs-12">
+			<input type="radio" name="play-way" value="u" checked="checked" />  <label> upward </label><br />
+			<input type="radio" name="play-way" value="d" /> <label> downward </label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-6 col-xs-offset-0">
+			<button type="submit" class="btn btn-primary btn-lg col-xs-12">Start session</button>
+		</div>
+		
+	</div>
+</form>

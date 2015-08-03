@@ -1,0 +1,47 @@
+#control {
+  .game {
+    .row {
+      padding-bottom:20px;
+    }
+    .score {
+      font-size:1.6em;
+    }
+    .intervals, .controls {
+      margin-bottom:10px;
+    }
+  }
+}
+
+#game-logs {
+  margin-right:50px;
+  padding: 20px 0;
+  height: 100vh;
+  overflow:scroll;
+  
+  .log-container {
+    background-color:#112;
+    color:white;
+    padding:20px;
+    border-radius:5px;
+    opacity:0.78;
+    margin-bottom:30px;
+  }
+  
+  ul {
+    list-style: none;
+    li.log-label {
+      margin-top:10px;
+    }
+    li .log-error {
+      padding-left:30px;
+    }
+  }
+  
+  .log-graph {
+    display:inline-block;
+    height:5px;
+    &.bg-wrong {
+      background-color:#D55;
+    }
+  }
+}

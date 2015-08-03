@@ -1,0 +1,45 @@
+<div id="log-line-{{intervalId}}" class="log-container xbounceInLeft xanimated">
+<div class="row">
+	<div class="col-xs-12">
+		<h4>
+			<span>
+				You recognized the {{interval}} <strong>{{average}}%</strong> of the time ({{correct}}/{{tries}})
+			</span>
+		</h4>
+	</div>
+	{{#if errors}}
+	
+	<div class="col-xs-12">
+		<ul>
+			{{#if correct}}
+			<li>
+				<div class="row {{intervalId}}">
+					<div class="col-xs-6">correct answer {{../correct}} time(s)</div>
+					<div class="col-xs-6">
+						<div style="width:{{../oldAverage}}%;" class="bg-primary log-graph"></div>
+					</div>
+				</div>
+			</li>
+			{{/if}}
+			<li class="log-label">
+				<div class="row">
+					<div class="col-xs-12"><strong class="text-primary">You confused <em>{{../interval}}</em> with:</strong></div>
+				</div>
+			</li>
+			
+		{{#errors}}
+			
+			<li>
+				<div class="row {{intervalId}}">
+					<div class="col-xs-6 log-error">- <em>{{interval}}</em> {{hits}} time(s)</div>
+					<div class="col-xs-6">
+						<div style="width:{{oldAverage}}%;" class="bg-wrong log-graph"></div>
+					</div>
+				</div>
+			</li>
+		{{/errors}}
+		</ul>
+	</div>
+	{{/if}}
+</div>
+</div>

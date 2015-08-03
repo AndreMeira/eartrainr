@@ -1,0 +1,82 @@
+body {
+  
+  header.main-header {
+    color:white;
+    background:black;
+    padding-bottom:5px;
+    border-bottom:solid 1px green;
+    @media (min-width: @screen-md-min) {
+      font-family: 'Dancing Script', cursive;
+      box-shadow: 1px 1px 12px #555;
+      h1 {
+        font-size:2em;
+        margin-left:20px;
+      }
+    }
+    
+  }
+  div.p-layer-background {
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: right top;
+    height:100vh;
+    width:100%;
+    position:fixed;
+    top:-20px;   
+    z-index:-1;
+    @media (min-width: @screen-md-min) {
+      background-image: url('../img/background.jpg');
+    }
+  }
+
+  footer {
+    display: none;
+    height:70vh;
+    padding:20px 50px;
+    background-color: white;
+    border-top:solid 1px #aaa;
+    @media (min-width: @screen-md-min) {
+      display:block;
+    }
+  }
+  .bird {
+    display:none;
+    @media (min-width: @screen-md-min) {
+      display:block;
+    }
+  }
+}
+
+
+
+#control {
+  background-color:white;
+  padding:0 30px;
+  
+  @media (min-width: @screen-md-min) {
+    margin-top:-20vh;
+    box-shadow: 1px 1px 12px #555;
+    border-radius:10px; 
+  }
+  
+  h2 {
+    border-bottom: 1px solid #9AAEC9;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  
+}
+
+.main {
+      
+}
+
+.vertical-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+@import "./setup.less";
+@import "./game.less";
+

@@ -1,0 +1,7 @@
+/**
+ * Undefined
+ */
+var undefined;
+
+
+

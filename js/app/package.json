@@ -1,0 +1,17 @@
+{
+  "name": "eartrainr",
+  "version": "1.0.0",
+  "description": "a tool to train your ears",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andre meira",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.2.1",
+    "hbsfy": "^2.2.1",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  }
+}
