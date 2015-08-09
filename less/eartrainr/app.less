@@ -1,0 +1,291 @@
+.eartrainr {
+  
+  #trainer-window {
+    display:none;
+  }
+  
+  &.scrolled {
+    header {
+      .obj-layer {
+        opacity:1;
+        background-color: black;
+      }
+    }  
+  }
+  
+  &.training-on {
+    overflow:hidden;
+    #main {
+      display:none;
+      @media (min-width: @screen-md-min) {
+        display:block;
+        scroll:none;
+      }
+    }
+    
+    #paralaxe-one {
+      display:none;
+      @media (min-width: @screen-md-min) {
+        display:block;
+      }
+    }
+    #trainer-window {
+      display:block;
+    }
+    
+  }
+  
+  #trainer-window {
+    position:relative;
+    height:initial;
+    z-index:10;
+    
+    @media (min-width: @screen-md-min) {
+      position:fixed;
+      height:100vh;
+      top:0;
+      left:0;
+      right:0;
+    }
+    
+    #close-trainer {
+      display:inline-block;
+      font-size:2rem;
+      padding:0 10px; 
+      color:white;
+      @media (min-width: @screen-md-min) {
+        padding:0 50px;  
+      }
+    }
+    
+    #game-logs {
+      margin-right:50px;
+      padding: 20px 0;
+      height: 100%;
+      overflow:scroll;
+      position:absolute;
+      top:0;
+      bottom:0;
+      
+      .log-container {
+        background-color:#112;
+        color:white;
+        padding:20px;
+        border-radius:5px;
+        opacity:0.78;
+        margin-bottom:30px;
+      }
+      
+      ul {
+        list-style: none;
+        li.log-label {
+          margin-top:10px;
+        }
+        li .log-error {
+          padding-left:30px;
+        }
+      }
+      
+      .log-graph {
+        display:inline-block;
+        height:5px;
+        &.bg-wrong {
+          background-color:#D55;
+        }
+      }
+    }
+    
+    #control-container {
+      position:relative;
+      background-color:white;
+      padding: 40px 0;
+      
+      @media (min-width: @screen-md-min) {
+        position:absolute;
+        top:50px;
+        bottom:40px;
+        left:40px;
+        right:40px;
+        border-radius:5px;
+      }
+      
+      #control {
+        .game {
+          @media (min-width: @screen-md-min) {
+            padding:0 40px;
+          }
+          
+          .row {
+            padding-bottom:20px;
+          }
+          .score {
+            font-size:1.6em;
+          }
+          .intervals, .controls {
+            margin-bottom:10px;
+          }
+        }
+        
+        .setup {
+          padding:0 40px;
+          
+           .row {
+             padding-bottom:20px;
+           }
+        }
+      }
+    }
+    
+    .obj-layer {
+      background:black;
+    }
+  }
+  
+  #who-uses-it, #about-me {
+    padding: 50px 0; 
+  }
+  
+  #about-me {
+    background-color: #333; 
+    color:white;
+    
+    article > div {
+      padding: 0 50px;
+    }
+  }
+  
+  #who-uses-it {
+    background-color: white;
+    .articles-container {
+      padding: 10px 5vw;
+      font-family: 'Helvetica Neue';
+      font-weight: 200;
+    }
+    article {
+      img {
+        border-radius: 50%;
+        width:150px;
+        height:150px; 
+        border:solid 3px #cecece;
+      }
+    }
+  }
+  
+  header {
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:2;
+    
+    .obj-layer {
+      transition: all 0.5s ease-in-out;
+    }
+    
+    h1 {
+      color:white;
+      font-size:1.8rem;
+      margin-left:20px;
+      margin-top:10px;
+    }
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 4rem; 
+    font-family: 'Economica', sans-serif;
+    margin: 50px 0;
+  }
+
+  .font-ds {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  section {
+    border-top: solid 1px #777;
+  }
+  
+  #go-training-big {
+    text-align:center;
+    background-color: #efefef;
+    
+    .as-title {
+      font-size: 3rem;
+    }
+  }
+  
+  #start-training-big {
+    border: 0px solid #efefef;
+    border-radius: 10px;
+    color: #555;
+    padding: 60px;
+    text-align: center;
+    width: 100%;
+    transition: all 0.5s ease 0s;
+    
+    &:after {
+      background: #ddd none repeat scroll 0 0;
+      border-radius: 10px;
+      left: 50px;
+      right: 50px;
+      bottom: 30px;
+      top: 30px;
+      content: "";
+      position: absolute;
+      transition: all 0.5s ease 0s;
+      z-index: -1;
+    }
+    
+    &:hover {
+      border: 3px solid #ddd;
+    }
+    
+    &:hover:after {
+      bottom: 10px;
+      left: 25px;
+      right: 25px;
+      top: 10px;
+      background: #337ab7 none repeat scroll 0 0;
+    }
+    
+    a {
+      font-family: 'Economica';
+      color:#fff;
+      text-decoration:none;
+      font-size:2.3rem;
+    }
+  }
+  
+  #eartrainer-setup-region {
+    color:white;
+    
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: left top;
+    
+    .obj-layer {
+      background:white; 
+      border-radius: 2px;
+    }
+  
+    #eartrainer-setup-view {
+      margin-bottom:10px; 
+      text-align:center;
+      padding:30px;
+      
+      .as-title {
+        color:black;
+        font-size:4em;
+        margin-bottom:10px; 
+        font-family: 'Economica', sans-serif;
+        text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+      }
+      
+      .sub-title {
+        font-size:.8rem; 
+        color:#333;
+        font-family: monospace;
+        margin-bottom: 50px;
+      }
+    }    
+  }
+}

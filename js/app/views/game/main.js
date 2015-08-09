@@ -125,7 +125,7 @@ module.exports = Backbone.View.extend({
 	
 	stopGame: function () {
 		app.state.trigger('clicked:stop');
-		app.router.navigate('/', {trigger: true});
+		app.router.navigate('!/setup', {trigger: true});
 		return false;
 	}
 });

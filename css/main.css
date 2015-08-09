@@ -6764,98 +6764,149 @@ button.close {
     display: none !important;
   }
 }
-body header.main-header {
-  color: white;
-  background: black;
-  padding-bottom: 5px;
-  border-bottom: solid 1px green;
+html {
+  font-size: 100%;
 }
-@media (min-width: 992px) {
-  body header.main-header {
-    font-family: 'Dancing Script', cursive;
-    box-shadow: 1px 1px 12px #555;
-  }
-  body header.main-header h1 {
-    font-size: 2em;
-    margin-left: 20px;
+@media (max-width: 767px) {
+  html {
+    font-size: 80%;
+    line-height: 80%;
   }
 }
-body div.p-layer-background {
+html .center-text {
+  text-align: center;
+}
+html .center-justify {
+  text-align: justify;
+}
+html .text-right {
+  text-align: right;
+}
+.obj-vertical-flex {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+}
+.fluid-font {
+  font-size: 100%;
+}
+@media (max-width: 767px) {
+  .fluid-font {
+    font-size: 80%;
+  }
+}
+.obj-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.8;
+}
+.obj-fs-height {
+  height: 100vh;
+  overflow: hidden;
+}
+.obj-hs-height {
+  height: 50vh;
+  overflow: hidden;
+}
+.obj-align-vc {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.obj-align-hc {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.obj-parallaxe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right top;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: -20px;
-  z-index: -1;
+  background-position: left top;
+  overflow: hidden;
 }
-@media (min-width: 992px) {
-  body div.p-layer-background {
-    background-image: url('../img/background.jpg');
+/* fix bootstrap */
+@media (max-width: 992px) {
+  .col-xs-0 {
+    display: none;
   }
 }
-body footer {
+.eartrainr #trainer-window {
   display: none;
-  height: 70vh;
-  padding: 20px 50px;
-  background-color: white;
-  border-top: solid 1px #aaa;
 }
-@media (min-width: 992px) {
-  body footer {
-    display: block;
-  }
+.eartrainr.scrolled header .obj-layer {
+  opacity: 1;
+  background-color: black;
 }
-body .bird {
+.eartrainr.training-on {
+  overflow: hidden;
+}
+.eartrainr.training-on #main {
   display: none;
 }
 @media (min-width: 992px) {
-  body .bird {
+  .eartrainr.training-on #main {
+    display: block;
+    scroll: none;
+  }
+}
+.eartrainr.training-on #paralaxe-one {
+  display: none;
+}
+@media (min-width: 992px) {
+  .eartrainr.training-on #paralaxe-one {
     display: block;
   }
 }
-#control {
-  background-color: white;
-  padding: 0 30px;
+.eartrainr.training-on #trainer-window {
+  display: block;
+}
+.eartrainr #trainer-window {
+  position: relative;
+  height: initial;
+  z-index: 10;
 }
 @media (min-width: 992px) {
-  #control {
-    margin-top: -20vh;
-    box-shadow: 1px 1px 12px #555;
-    border-radius: 10px;
+  .eartrainr #trainer-window {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
-#control h2 {
-  border-bottom: 1px solid #9AAEC9;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+.eartrainr #trainer-window #close-trainer {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0 10px;
+  color: white;
 }
-.vertical-center {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+@media (min-width: 992px) {
+  .eartrainr #trainer-window #close-trainer {
+    padding: 0 50px;
+  }
 }
-#control .setup .row {
-  padding-bottom: 20px;
-}
-#control .game .row {
-  padding-bottom: 20px;
-}
-#control .game .score {
-  font-size: 1.6em;
-}
-#control .game .intervals,
-#control .game .controls {
-  margin-bottom: 10px;
-}
-#game-logs {
+.eartrainr #trainer-window #game-logs {
   margin-right: 50px;
   padding: 20px 0;
-  height: 100vh;
+  height: 100%;
   overflow: scroll;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
-#game-logs .log-container {
+.eartrainr #trainer-window #game-logs .log-container {
   background-color: #112;
   color: white;
   padding: 20px;
@@ -6863,19 +6914,182 @@ body .bird {
   opacity: 0.78;
   margin-bottom: 30px;
 }
-#game-logs ul {
+.eartrainr #trainer-window #game-logs ul {
   list-style: none;
 }
-#game-logs ul li.log-label {
+.eartrainr #trainer-window #game-logs ul li.log-label {
   margin-top: 10px;
 }
-#game-logs ul li .log-error {
+.eartrainr #trainer-window #game-logs ul li .log-error {
   padding-left: 30px;
 }
-#game-logs .log-graph {
+.eartrainr #trainer-window #game-logs .log-graph {
   display: inline-block;
   height: 5px;
 }
-#game-logs .log-graph.bg-wrong {
+.eartrainr #trainer-window #game-logs .log-graph.bg-wrong {
   background-color: #D55;
+}
+.eartrainr #trainer-window #control-container {
+  position: relative;
+  background-color: white;
+  padding: 40px 0;
+}
+@media (min-width: 992px) {
+  .eartrainr #trainer-window #control-container {
+    position: absolute;
+    top: 50px;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 992px) {
+  .eartrainr #trainer-window #control-container #control .game {
+    padding: 0 40px;
+  }
+}
+.eartrainr #trainer-window #control-container #control .game .row {
+  padding-bottom: 20px;
+}
+.eartrainr #trainer-window #control-container #control .game .score {
+  font-size: 1.6em;
+}
+.eartrainr #trainer-window #control-container #control .game .intervals,
+.eartrainr #trainer-window #control-container #control .game .controls {
+  margin-bottom: 10px;
+}
+.eartrainr #trainer-window #control-container #control .setup {
+  padding: 0 40px;
+}
+.eartrainr #trainer-window #control-container #control .setup .row {
+  padding-bottom: 20px;
+}
+.eartrainr #trainer-window .obj-layer {
+  background: black;
+}
+.eartrainr #who-uses-it,
+.eartrainr #about-me {
+  padding: 50px 0;
+}
+.eartrainr #about-me {
+  background-color: #333;
+  color: white;
+}
+.eartrainr #about-me article > div {
+  padding: 0 50px;
+}
+.eartrainr #who-uses-it {
+  background-color: white;
+}
+.eartrainr #who-uses-it .articles-container {
+  padding: 10px 5vw;
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+}
+.eartrainr #who-uses-it article img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: solid 3px #cecece;
+}
+.eartrainr header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.eartrainr header .obj-layer {
+  transition: all 0.5s ease-in-out;
+}
+.eartrainr header h1 {
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.eartrainr h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Economica', sans-serif;
+  margin: 50px 0;
+}
+.eartrainr .font-ds {
+  font-family: 'Dancing Script', cursive;
+}
+.eartrainr section {
+  border-top: solid 1px #777;
+}
+.eartrainr #go-training-big {
+  text-align: center;
+  background-color: #efefef;
+}
+.eartrainr #go-training-big .as-title {
+  font-size: 3rem;
+}
+.eartrainr #start-training-big {
+  border: 0px solid #efefef;
+  border-radius: 10px;
+  color: #555;
+  padding: 60px;
+  text-align: center;
+  width: 100%;
+  transition: all 0.5s ease 0s;
+}
+.eartrainr #start-training-big:after {
+  background: #ddd none repeat scroll 0 0;
+  border-radius: 10px;
+  left: 50px;
+  right: 50px;
+  bottom: 30px;
+  top: 30px;
+  content: "";
+  position: absolute;
+  transition: all 0.5s ease 0s;
+  z-index: -1;
+}
+.eartrainr #start-training-big:hover {
+  border: 3px solid #ddd;
+}
+.eartrainr #start-training-big:hover:after {
+  bottom: 10px;
+  left: 25px;
+  right: 25px;
+  top: 10px;
+  background: #337ab7 none repeat scroll 0 0;
+}
+.eartrainr #start-training-big a {
+  font-family: 'Economica';
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.3rem;
+}
+.eartrainr #eartrainer-setup-region {
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+.eartrainr #eartrainer-setup-region .obj-layer {
+  background: white;
+  border-radius: 2px;
+}
+.eartrainr #eartrainer-setup-region #eartrainer-setup-view {
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 30px;
+}
+.eartrainr #eartrainer-setup-region #eartrainer-setup-view .as-title {
+  color: black;
+  font-size: 4em;
+  margin-bottom: 10px;
+  font-family: 'Economica', sans-serif;
+  text-shadow: -1px 0 #eeeeee, 0 1px #eeeeee, 1px 0 #eeeeee, 0 -1px #eeeeee;
+}
+.eartrainr #eartrainer-setup-region #eartrainer-setup-view .sub-title {
+  font-size: .8rem;
+  color: #333;
+  font-family: monospace;
+  margin-bottom: 50px;
 }

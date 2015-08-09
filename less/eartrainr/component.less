@@ -1,0 +1,87 @@
+html {
+  font-size:100%;
+  @media (max-width: @screen-xs-max) {
+    font-size: 80%; 
+    line-height:80%;
+  }
+  
+  .center-text {
+    text-align:center; 
+  }
+  
+  .center-justify {
+    text-align:justify; 
+  }
+  
+  .text-right {
+    text-align:right;
+  }
+}
+
+.obj-vertical-flex {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.fluid-font {
+  font-size:100%;
+  @media (max-width: @screen-xs-max) {
+    font-size: 80%; 
+  }
+}
+
+.obj-layer {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: -1;
+  opacity:0.8;
+}
+
+.obj-fs-height {
+  height:100vh;
+  overflow:hidden;
+}
+
+.obj-hs-height {
+  height:50vh;
+  overflow:hidden;
+}
+
+.obj-align-vc {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform:translateY(-50%);
+}
+
+.obj-align-hc {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform:translateY(-50%);
+}
+
+.obj-parallaxe {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:100vh;
+  z-index:-1;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: left top;
+  overflow:hidden;
+}
+
+
+/* fix bootstrap */
+.col-xs-0 {
+  @media (max-width: @screen-md-min) {
+    display:none;
+  }
+}

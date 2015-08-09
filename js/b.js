@@ -35,8 +35,14 @@ var levels = {
 module.exports = Backbone.Router.extend({
 	routes:{
 		''                         : 'index',
+		'!/'                       : 'index',
+		'!/setup'                  : 'setup',
 		'!/way/:w/octave/:o/tr/:t' : 'start', 
 		'*notFound'                : 'notFound'
+	},
+	
+	index: function () {
+		$('body').removeClass('training-on');
 	},
 	
 	closeMainView: function () {
@@ -54,6 +60,7 @@ module.exports = Backbone.Router.extend({
 	},
 	
 	initStateGame: function (w, o, t) {
+		$('body').addClass('training-on');
 		console.log(w, o, t);
 		app.state.set('root-note', 'random');
 		
@@ -64,7 +71,8 @@ module.exports = Backbone.Router.extend({
 		app.state.trigger('clicked:start');
 	},
 	
-	index: function () {
+	setup: function () {
+		$('body').addClass('training-on');
 		this.closeMainView();
 		this.closeLogView();
 		app.mainView = new SetupView();
@@ -308,7 +316,7 @@ module.exports = Backbone.View.extend({
 	
 	stopGame: function () {
 		app.state.trigger('clicked:stop');
-		app.router.navigate('/', {trigger: true});
+		app.router.navigate('!/setup', {trigger: true});
 		return false;
 	}
 });
