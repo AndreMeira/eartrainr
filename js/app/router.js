@@ -21,6 +21,7 @@ module.exports = Backbone.Router.extend({
 	},
 	
 	index: function () {
+		$('#trainer-window').removeClass('slideInUp animated');
 		$('body').removeClass('training-on');
 	},
 	
@@ -52,6 +53,7 @@ module.exports = Backbone.Router.extend({
 	
 	setup: function () {
 		$('body').addClass('training-on');
+		$('#trainer-window').addClass('slideInUp animated');
 		this.closeMainView();
 		this.closeLogView();
 		app.mainView = new SetupView();

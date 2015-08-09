@@ -6972,6 +6972,8 @@ html .text-right {
 .eartrainr #who-uses-it,
 .eartrainr #about-me {
   padding: 50px 0;
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
 }
 .eartrainr #about-me {
   background-color: #333;
@@ -6985,8 +6987,6 @@ html .text-right {
 }
 .eartrainr #who-uses-it .articles-container {
   padding: 10px 5vw;
-  font-family: 'Helvetica Neue';
-  font-weight: 200;
 }
 .eartrainr #who-uses-it article img {
   border-radius: 50%;
