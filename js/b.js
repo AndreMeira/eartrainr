@@ -4,7 +4,7 @@ module.exports = {};
 
 },{}],2:[function(require,module,exports){
 module.exports =  {
-	baseUrl  : '/eartrainr',
+	baseUrl  : '',
 	
 	mediaUrl : function () {
 		return this.baseUrl + '/media';
@@ -1683,7 +1683,7 @@ app.engine = new Engine(app.state);
 
 Backbone.history.start({
 	//pushState:true,
-	root:'/eartrainr/'
+	root:'/'
 });
 
 },{"./app":1,"./app/router":3,"./app/state":4,"./engine":12,"backbone":22,"jquery":33,"underscore":34}],22:[function(require,module,exports){
