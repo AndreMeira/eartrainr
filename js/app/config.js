@@ -1,5 +1,5 @@
 module.exports =  {
-	baseUrl  : '/eartrainr',
+	baseUrl  : '',
 	
 	mediaUrl : function () {
 		return this.baseUrl + '/media';

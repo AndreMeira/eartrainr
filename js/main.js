@@ -12,5 +12,5 @@ app.engine = new Engine(app.state);
 
 Backbone.history.start({
 	//pushState:true,
-	root:'/eartrainr/'
+	root:'/'
 });
