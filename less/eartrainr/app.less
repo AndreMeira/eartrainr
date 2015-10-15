@@ -39,15 +39,14 @@
     position:relative;
     height:initial;
     z-index:10;
-    overflow:scroll;
     
-    @media (min-width: @screen-md-min) {
+    //@media (min-width: @screen-md-min) {
       position:fixed;
       height:100vh;
       top:0;
       left:0;
       right:0;
-    }
+    //}
     
     #close-trainer {
       display:inline-block;
@@ -99,10 +98,16 @@
     #control-container {
       position:relative;
       background-color:white;
-      padding: 40px 0;
+      overflow:scroll;
+      
+      position:absolute;
+      top:40px;
+      bottom:0px;
+      left:0px;
+      right:0px;
       
       @media (min-width: @screen-md-min) {
-        position:absolute;
+        padding: 40px 0;
         top:50px;
         bottom:40px;
         left:40px;
@@ -129,7 +134,6 @@
         
         .setup {
           padding:0 40px;
-          
            .row {
              padding-bottom:20px;
            }

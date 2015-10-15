@@ -6876,16 +6876,11 @@ html .text-right {
   position: relative;
   height: initial;
   z-index: 10;
-  overflow: scroll;
-}
-@media (min-width: 992px) {
-  .eartrainr #trainer-window {
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .eartrainr #trainer-window #close-trainer {
   display: inline-block;
@@ -6934,11 +6929,16 @@ html .text-right {
 .eartrainr #trainer-window #control-container {
   position: relative;
   background-color: white;
-  padding: 40px 0;
+  overflow: scroll;
+  position: absolute;
+  top: 40px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 @media (min-width: 992px) {
   .eartrainr #trainer-window #control-container {
-    position: absolute;
+    padding: 40px 0;
     top: 50px;
     bottom: 40px;
     left: 40px;
